@@ -1,9 +1,11 @@
-var assert = require("assert")
-describe('Array', function(){
-  describe('#indexOf()', function(){
-    it('should return -1 when the value is not present', function(){
-      assert.equal(-1, [1,2,3].indexOf(5));
-      assert.equal(-1, [1,2,3].indexOf(0));
+var assert = require("assert");
+var fs = require("fs");
+var path = require("path");
+
+describe('link check', function(){
+  describe('link existing', function(){
+    it('should return success when file exists is linked', function(){
+        fs.linkSync("test/file1","test/alias1");
     })
   })
 })
